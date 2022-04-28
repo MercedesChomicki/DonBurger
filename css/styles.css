@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+
+nav{
+    background-color: black;
+    height: 5rem;
+    text-align: center;
+    padding-top: 3%;
+}
+
+nav ol li{
+    list-style: none;
+    color: white;
+    display: inline;
+    font-size: 150%;
+}

@@ -12,14 +12,24 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <a href="./index.html"><li>Inicio</li></a>
-                <a href="./Productos.html"><li>Productos</li></a>
-                <a href="./Contacto.html"><li>Contacto</li></a>
+            <ul class="menu">
+                <li><a href=" ">GourmetBurger</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li class="nav-productos">
+                    <a href="./Productos.html">Productos</a>
+                    <ul class="nav-productos__lista">
+                        <li><a href="./Productos.html">Hamburguesas</a></li>
+                        <li><a href="./Productos.html">Ensaladas</a></li>
+                        <li><a href="./Productos.html">Papas</a></li>
+                        <li><a href="./Productos.html">Postres</a></li>
+                    </ul>
+                </li>
+                <li><a href="./Nosotros.html">Nosotros</a></li>
+                <li><a href="./Contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <div>
+    <div class="contacto">
         <h1>Contacto</h1>
         <form action="">
             <p>Nombre</p>
@@ -29,7 +39,7 @@
             <p>Celular</p>
             <input type="number" name="" id="">
             <p>Email</p>
-            <input type="email" name="" id="">
+            <input type="email" name="" id="email">
             <p>Ciudad</p>
             <input type="text" name="" id="">
             <p>Asunto</p>
@@ -41,7 +51,14 @@
 
     </div>
     <footer>
-
+        <h3>GourmetBurger.SA</h3>
+        <div class="redes-sociales">
+            <img src="./imagenes/facebook.png" alt="Facebook">
+            <img src="./imagenes/instagram.png" alt="Instagram">
+            <img src="./imagenes/twitter.png" alt="Twitter">
+            <img src="./imagenes/youtube.png" alt="Youtube">
+        </div>
+        <a href="./Contacto.html">Contacto</a>
     </footer>
 
 </body>

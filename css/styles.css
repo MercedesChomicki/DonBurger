@@ -7,9 +7,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 /* Barra de navegacion */
-body{
-    background-color: #f5d25791;
-}
+
 nav{
     background-color: rgb(221, 7, 7);
     color: white;
@@ -56,7 +54,17 @@ ul{
 .menu li:hover .nav-productos__lista{
     display: block;
     width: 100%;
-    background-color: rgb(221, 7, 7);
+    background-color: #dd0707;
+}
+
+/* Titulos */
+h1{
+    font-family: 'koulen', cursive;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 1em;
 }
 
 /* Imagenes */
@@ -64,12 +72,19 @@ ul{
 img{
     width: 20em;
 }
-
+.mano{
+    width: 3.5em;
+    height: 3.5em;
+}
 /* Inicio */
 
 .inicio, .nosotros, .body-productos, .contacto{
     position: relative;
     top: 3.6em;
+    padding-bottom: 5em;
+}
+.inicio__imagenYtitulo{
+    position: relative;
 }
 .img-principal{
     width: 100%;
@@ -80,7 +95,7 @@ img{
     font-weight: 200;
     font-size: 2.5em;
     position: absolute;
-    top: 50%;
+    top: 70%;
     right: 9%;
     color: white;
     text-shadow: 5px 10px 15px #000;
@@ -88,45 +103,106 @@ img{
 .carita-feliz{
     width: 3.8em;
     position: absolute;
-    top: 50%;
-    right: 3%;
+    top: 80%;
+    right: 2.5%;
     box-shadow: 5px 5px 40px rgb(0, 0, 0);
     border-radius: 100%;
 }
-.contenido{
-    position: relative;
-    height: 15em;
+.inicio__contenido{
+    position: absolute;
+    height: 75%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-.contenido p{
+    /* border: 1px solid #000;
+    background-color: rgba(255, 236, 69, 0.251);
+    box-shadow: 4px 4px 8px #000; */
+    margin-top: -0.5em;
+    /* background-image: url(/imagenes/fondo.jpg);
+    background-size: cover; 
+    color: #fff; */
     color: #000;
-    margin-top: -5px;
-    padding: 2em 2.5em;
-    font-size: 1.3em;
-
+}
+.inicio__contenido--p1{
+    font-size: 1.2em;
+    padding: 2em 5em;
+    text-align: justify;
+}
+.inicio__contenido--p2{
+    display: flex;
+    justify-content: right;
+    padding: 2em;
+    margin-bottom: 3.5em;
 }
 
 /* Productos */
-.productos-pedidos{
-    display: flex;
+.iconos-productos{
+    width: 3em;
 }
-.productos-tipos{
+.lista-productos{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.publicidad{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 3em 0;
+    background-color: beige;
+}
+h2{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+}
+.img-publi{
+    display: block;
+    margin: auto;
+    width: 40vw;
+    padding-bottom: 1em;
+}
+.card-especial{
+    width: 30em;
+}
+.nuevas-hamburguesas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-cards{
     display: flex;
     flex-wrap: wrap;
+    padding: 2em;
 }
-.productos-tipos__hamburguesas ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1em;
+.card{
+    width: 20em;
+    margin-left: 3em;
+    margin-bottom: 1em;
 }
-.productos-tipos__hamburguesas ul li{
-    width: 40%;
-    padding: 1em;
+h3{
+    padding-top: 1em;
 }
-
+.btn-agregarCarrito{
+    padding: 0.5em;
+    color: #fff;
+    background-color: #0055FF;
+    border: 1px solid #0055FF;
+    border-radius: 6%;
+    margin-top: 1em;
+    font-size: 1em;
+}
+.carrito{
+    text-align: center;
+}
+.carrito table{
+    margin:auto;
+    text-align: center;
+}
+.carrito h3{
+    display: inline;
+}
 /* Productos: Tabla de pedidos */
 
 tr{
@@ -139,6 +215,12 @@ td{
 }
 
 /* Formulario contacto */
+form{
+    text-align: center;
+}
+form ul li{
+    padding: 0.5em;
+}
 input{
     text-transform: capitalize;
 }
@@ -178,3 +260,4 @@ footer a:hover{
     background-color: #ffce1e;
 }
 
+/*formulario*/

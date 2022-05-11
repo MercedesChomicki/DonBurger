@@ -31,22 +31,40 @@
     </header>
     <div class="contacto">
         <h1>Contacto</h1>
-        <form action="">
-            <p>Nombre</p>
-            <input type="text">
-            <p>Apellido</p>
-            <input type="text">
-            <p>Celular</p>
-            <input type="number" name="" id="">
-            <p>Email</p>
-            <input type="email" name="" id="email">
-            <p>Ciudad</p>
-            <input type="text" name="" id="">
-            <p>Asunto</p>
-            <input type="text" name="" id="">
-            <p>Mensaje</p>
-            <textarea name="Escribe aqui..." id="" cols="30" rows="10"></textarea>
-            <input type="submit" name="" id="">
+        <form>
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+                <li>
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" name="user_lastname">
+                </li>
+                <li>
+                    <label for="number">Celular:</label>
+                    <input type="number" id="number" name="user_celphone">
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_mail">
+                </li>
+                <li>
+                    <label for="city">Ciudad:</label>
+                    <input type="text" id="city" name="user_city">
+                </li>
+                <li>
+                    <label for="case">Asunto:</label>
+                    <input type="text" id="case" name="user_name">
+                </li>
+                <li>
+                    <label for="msg">Mensaje:</label>
+                    <textarea id="msg" name="user_message">Escribe aquí...</textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Enviar</button>
+                </li>
+            </ul>
         </form>
 
     </div>
@@ -60,7 +78,7 @@
         </div>
         <a href="./Contacto.html">Contacto</a>
     </footer>
-
+    <script src="./main.js"></script>
 </body>
 
 </html>

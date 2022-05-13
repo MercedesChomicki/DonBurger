@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@100&family=Ms+Madi&family=Raleway:wght@100&display=swap');
 
 *{
     margin: 0;
@@ -56,7 +56,12 @@ ul{
     width: 100%;
     background-color: #dd0707;
 }
-
+.logo a{
+    font-size: 2.2em;
+    color: #FFF;
+    font-family: 'Ms Madi', cursive;
+    padding: 0.3em;
+}
 /* Titulos */
 h1{
     font-family: 'koulen', cursive;
@@ -71,10 +76,7 @@ h1{
 
 img{
     width: 20em;
-}
-.mano{
-    width: 3.5em;
-    height: 3.5em;
+    border-radius: 2em;
 }
 /* Inicio */
 
@@ -88,14 +90,15 @@ img{
 }
 .img-principal{
     width: 100%;
+    border-radius: 0;
 }
 .titulo-index{
     font-family: 'koulen', cursive;
     font-style: italic;
     font-weight: 200;
-    font-size: 2.5em;
+    font-size: 2.8em;
     position: absolute;
-    top: 70%;
+    top: 73%;
     right: 9%;
     color: white;
     text-shadow: 5px 10px 15px #000;
@@ -103,36 +106,23 @@ img{
 .carita-feliz{
     width: 3.8em;
     position: absolute;
-    top: 80%;
+    top: 83%;
     right: 2.5%;
     box-shadow: 5px 5px 40px rgb(0, 0, 0);
     border-radius: 100%;
 }
 .inicio__contenido{
     position: absolute;
-    height: 75%;
+    height: 35vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    /* border: 1px solid #000;
-    background-color: rgba(255, 236, 69, 0.251);
-    box-shadow: 4px 4px 8px #000; */
     margin-top: -0.5em;
-    /* background-image: url(/imagenes/fondo.jpg);
-    background-size: cover; 
-    color: #fff; */
     color: #000;
+    background-color: #ffdb58;
 }
 .inicio__contenido--p1{
     font-size: 1.2em;
     padding: 2em 5em;
-    text-align: justify;
-}
-.inicio__contenido--p2{
-    display: flex;
-    justify-content: right;
-    padding: 2em;
-    margin-bottom: 3.5em;
 }
 
 /* Productos */
@@ -174,6 +164,7 @@ h2{
 .container-cards{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 2em;
 }
 .card{
@@ -181,10 +172,10 @@ h2{
     margin-left: 3em;
     margin-bottom: 1em;
 }
-h3{
+.card h3{
     padding-top: 1em;
 }
-.btn-agregarCarrito{
+.btn-agregarCarrito, .btn-enviar{
     padding: 0.5em;
     color: #fff;
     background-color: #0055FF;
@@ -214,6 +205,21 @@ td{
     height: 25px;
 }
 
+/* Nosotros */
+.nosotros{
+    display: flex;
+    text-align: justify;
+    margin-left: 4em;
+}
+.txt-nosotros{
+    padding-top: 3em;
+    line-height: 1.5em;
+}
+.img-nosotros{
+    width: 30em;
+    margin: 5em;
+}
+
 /* Formulario contacto */
 form{
     text-align: center;
@@ -227,11 +233,48 @@ input{
 input:focus{
     height: 1.5rem;
 }
-#email{
+.email{
     text-transform: none;
 }
-
-
+.segurity-code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.code{
+    border: 1px solid #000;
+    padding: 0.5em;
+    width: 20%;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    user-select: none;
+}
+.input-captcha{
+    text-transform: none;
+}
+.val{
+    border: 1px solid #000;
+    padding: 0.5em;
+    margin: auto;
+    margin-top: 1em;
+    display: none;
+    font-size: 1em;
+    /* border-radius: 50% 5%; */
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 2px 5px 5px #000;
+}
+.rojo{
+    background-color: #dd0707;
+    width: 15em;
+}
+.verde{
+    background-color: rgb(0, 244, 28);
+    width: 10em;
+}
 /* Footer */
 footer{
     display: flex;
@@ -259,5 +302,3 @@ footer a:hover{
     color: rgb(221, 7, 7);
     background-color: #ffce1e;
 }
-
-/*formulario*/

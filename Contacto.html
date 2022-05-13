@@ -6,14 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Comidas rapidas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gourmet Burger</title>
 </head>
 
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li><a href=" ">GourmetBurger</a></li>
+                <li class="logo"><a href="./index.html">GourmetBurger</a></li>
                 <li><a href="./index.html">Inicio</a></li>
                 <li class="nav-productos">
                     <a href="./Productos.html">Productos</a>
@@ -35,39 +38,53 @@
             <ul>
                 <li>
                     <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="user_name">
+                    <input type="text" id="name" name="user_name" required>
                 </li>
                 <li>
                     <label for="lastname">Apellido:</label>
-                    <input type="text" id="lastname" name="user_lastname">
+                    <input type="text" id="lastname" name="user_lastname" required>
                 </li>
                 <li>
                     <label for="number">Celular:</label>
-                    <input type="number" id="number" name="user_celphone">
+                    <input type="number" id="number" name="user_celphone" required>
                 </li>
                 <li>
                     <label for="mail">Correo electrónico:</label>
-                    <input type="email" id="mail" name="user_mail">
+                    <input type="email" id="email" name="user_mail" class="email" required>
                 </li>
                 <li>
                     <label for="city">Ciudad:</label>
-                    <input type="text" id="city" name="user_city">
+                    <input type="text" id="city" name="user_city" required>
                 </li>
                 <li>
                     <label for="case">Asunto:</label>
-                    <input type="text" id="case" name="user_name">
+                    <input type="text" id="case" name="user_name" required>
                 </li>
                 <li>
                     <label for="msg">Mensaje:</label>
-                    <textarea id="msg" name="user_message">Escribe aquí...</textarea>
+                    <textarea id="msg" name="user_message" placeholder="Escribe aqui..."></textarea>
+                </li>
+                <li>
+                    <div class="segurity-code">
+                        <p id="code" class="code">AlYeZ59cO</p>
+                        <span class="actualizar-texto"><i class="fa-solid fa-rotate"></i></span>
+                    </div>
+                    <div class="userInput">
+                        <label for="captcha" id="captcha-text">Introduzca el texto: </label>
+                        <input type="text" id="captcha-input" class="input-captcha">
+                        <button type="button" id="btn-validar">Validar</button>
+                        <p id="vacio" class="val rojo">Por favor, ingrese texto</p>
+                        <p id="validado" class="val verde">Validado</p>
+                        <p id="invalido" class="val rojo">Codigo invalido, intentelo nuevamente</p>
+                    </div>
                 </li>
                 <li class="button">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" id="btn-enviar" class="btn-enviar">Enviar</button>
                 </li>
             </ul>
         </form>
-
     </div>
+
     <footer>
         <h3>GourmetBurger.SA</h3>
         <div class="redes-sociales">

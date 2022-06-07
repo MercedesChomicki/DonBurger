@@ -11,11 +11,13 @@
 /* Barra de navegacion */
 
 nav{
+    display: flex;
     background-color: rgb(221, 7, 7);
     color: white;
     width: 100%;
     position: fixed;
     z-index: 100;
+    justify-content: center;
 }
 nav a{
     color: white;  
@@ -28,15 +30,15 @@ nav a:hover{
 }
 .menu{
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
+    width: 80%;
 }
 .menu li{
     position: relative;
     width: 20%;
-    
     text-align: center;
 }
-
 .nav-productos__lista{
     position: absolute;
     display: none;
@@ -56,11 +58,17 @@ nav a:hover{
     width: 100%;
     background-color: #dd0707;
 }
+.logo{
+    display: inline-block;
+}
 .logo a{
     font-size: 2.2em;
     color: #FFF;
     font-family: 'Ms Madi', cursive;
     padding: 0.3em;
+}
+.btn_menu{
+    display: none;
 }
 /* Titulos */
 h1{
@@ -82,6 +90,7 @@ img{
 .inicio, .nosotros, .body-productos, .contacto{
     position: relative;
     top: 3.6em;
+    background-color: beige;
 }
 .img-principal{
     width: 100%;
@@ -213,8 +222,15 @@ td{
 }
 
 /* Formulario contacto */
+
 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 4em;
 }
 form ul li{
     padding: 0.5em;
@@ -236,7 +252,7 @@ input:focus{
 .code{
     border: 1px solid #000;
     padding: 0.5em;
-    width: 20%;
+    width: 40%;
     margin-bottom: 1em;
     margin-right: 1em;
     font-size: 1.5em;
@@ -290,4 +306,42 @@ footer a{
 footer a:hover{
     color: rgb(221, 7, 7);
     background-color: #ffce1e;
+}
+@media screen and (max-width:768px){
+    .container-cards{
+        justify-content:space-evenly;
+        padding: 0;
+    }
+    section{
+        padding: 2em 0 4em 0;
+        width: 50%;
+        border: 1px solid #000;
+    }
+    form ul li{
+        padding-bottom: 1.5em;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+    .menu{
+        position: fixed;
+        top: -100vh;
+        width: 100vw;
+        flex-direction: column;
+        background-color: rgb(221, 7, 7);
+    }
+    .btn_menu{
+        display: flex;
+        align-items: center;
+        font-size: 2.5em;
+        color: #FFF;
+    }
+}
+@media screen and (max-width: 480px){
+    .btn_menu{
+        display: inline-block;
+    }
 }

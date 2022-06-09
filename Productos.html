@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Gourmet Burger</title>
@@ -31,7 +33,7 @@
     </header>
 
     <section class="body-productos">
-        <h1>Nuestros productos</h1>
+        <h1 class="titulos">Nuestros productos</h1>
         <div class="body_productos--encabezado">
             <div class="lista-productos">
                 <a href="#">
@@ -52,14 +54,14 @@
                 </a>
                 <a href="#">
                     <img src="./imagenes/combo.png" alt="Hamburguesas" class="iconos-productos">
-                    <b>Combo Especial</b>
+                    <b>Promo</b>
                 </a>
             </div>
             <div>
                 <ul>
                     <li class="carrito-compras">
+                        <img src="./imagenes/carrito.png" alt="Carrito de compras" class="icono-carrito">
                         <div id="carrito" class="carrito">
-                            <h3>Pedidos</h3>
                             <table id="lista-carrito">
                                 <thead>
                                     <tr>
@@ -71,26 +73,27 @@
                                 </thead>
                                 <tbody></tbody>
                             </table>
-                            <a href="#" id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</a>
+                            <a href="#" id="vaciar-carrito" class="vaciar-carrito btn btn-danger">Vaciar carrito</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="productos">
+        <div id="productos" class="productos">
             <div>
                 <div>
                     <h2>Hamburguesas</h2>
                     <div class="container-cards">
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/ClasicBurger.jpg" alt="Clasic Burger">
                             <div>
                                 <h3>ClasicBurger</h3>
                                 <p>Lechuga, tomate, jamon y queso.</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/blackBurger.jpg" alt="Black Burger">
                             <div>
                                 <h3>BlackBurger</h3>
@@ -98,20 +101,22 @@
                                     panceta, queso cheddar, lechuga, tomate, cebolla morada, batata y
                                     ketchup.
                                 </p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/burgerGrinch.jpg" alt="Burger Grinch">
                             <div>
                                 <h3>BurgerGrinch</h3>
                                 <p>Esta hamburguesa de garbanzos vegana está compuesta de repollo morado, tomate,
                                     tofu y
                                     lechuga.</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/pinkBurger-min.jpg" alt="Pink Burger">
                             <div>
                                 <h3>PinkBurger</h3>
@@ -119,23 +124,26 @@
                                     cebolla
                                     morada,
                                     panceta y queso</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/chickenBurger.jpg" alt="Chicken Burger">
                             <div>
                                 <h3>ChickenBurger</h3>
                                 <p>Esta hamburguesa esta compuesta por pollo, lechuga, tomate y queso cheddar.</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/fishBurger-min.jpg" alt="Fish Burger">
                             <div>
                                 <h3>FishBurger</h3>
                                 <p>Esta hamburguesa esta compuesta por salmon rosado y queso</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
 
@@ -144,44 +152,49 @@
                 <div>
                     <h2>Papas</h2>
                     <div class="container-cards">
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/PapasFritas.jpg" alt="Papas Fritas">
                             <h3>Papas Fritas</h3>
-                            <button class="btn-agregarCarrito">Agregar al carrito</button>
+                            <p class="precio">$800</p>
+                            <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/Noisette.jpg" alt="Papas Noisette">
                             <h3>Papas Noisette</h3>
-                            <button class="btn-agregarCarrito">Agregar al carrito</button>
+                            <p class="precio">$800</p>
+                            <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
                 <div>
                     <h2>Ensaladas</h2>
                     <div class="container-cards">
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/EnsaladaCesar-min.jpg" alt="Ensalada Cesar">
                             <div>
                                 <h3>Cesar</h3>
                                 <p>Ensalada compuesta por: pechugas de pollo, lechuga, queso parmesano y ajo.</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/EnsaladaCriolla.jpg" alt="Ensalada Criolla">
                             <div>
                                 <h3>Criolla</h3>
                                 <p>Ensalada compuesta de: lechuga, tomate cherry, cebolla morada, rucula y perejil.</p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/EnsaladaRepolloZanahoria.jpg" alt="Ensalada vegetariana">
                             <div>
                                 <h3>Vegan</h3>
                                 <p>Ensalada compuesta de: repollo morado, palta, queso, semillas de sesamo y brocoli.
                                 </p>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
                     </div>
@@ -189,39 +202,44 @@
                 <div>
                     <h2>Postres</h2>
                     <div class="container-cards">
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/helados-min.jpg" alt="Helados Artesanales">
                             <div>
                                 <h3>Helados Artesanales</h3>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/Receta-flan-napolitano.jpg" alt="Flan napolitano">
                             <div>
                                 <h3>Flan napolitano</h3>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/chocoPostre-min.jpg" alt="Mousse de chocolate con cerezas">
                             <div>
                                 <h3>Mousse de chocolate con cerezas</h3>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/3345.jpg" alt="Tiramisu con frutos rojos">
                             <div>
                                 <h3>Postre tiramisu con frutos rojos</h3>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="cards">
                             <img src="./imagenes/kiwi-min.jpg" alt="Pavlova de kiwi">
                             <div>
                                 <h3>Pavlova de kiwi</h3>
-                                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                                <p class="precio">$800</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
                     </div>
@@ -235,17 +253,20 @@
             <div>
                 <h2>Combo especial</h2>
                 <img src="./imagenes/combo-min.jpg" alt="Combo hamburguesa y papas fritas" class="img-publi">
-                <button class="btn-agregarCarrito">Agregar al carrito</button>
+                <p class="precio">$800</p>
+                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
             </div>
             <div>
                 <h2>Nuevas hamburguesas picantes</h2>
                 <div class="card-especial">
                     <img src="./imagenes/MexicanChiliBurger -2jpg.jpg" alt="Hamburguesa picante mexicana"
                         class="img-publi">
-                    <p class="chili-burger">Mega hamburguesa picante compuesta de ají, salsa picante, doble medallon de carne,
+                    <p class="chili-burger">Mega hamburguesa picante compuesta de ají, salsa picante, doble medallon de
+                        carne,
                         lechuga,
                         tomate, queso y cebolla morada. </p>
-                    <button class="btn-agregarCarrito">Agregar al carrito</button>
+                    <p class="precio">$800</p>
+                    <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
         </div>

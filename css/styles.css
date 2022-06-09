@@ -71,9 +71,9 @@ ul.navigation li:hover {
     background-color: #dd0707;
 }
 
-
 /* Titulos */
-h1{
+.titulos{
+    padding: 1em 0;
     font-family: 'koulen', cursive;
     font-style: italic;
     font-weight: 200;
@@ -138,6 +138,13 @@ img{
 }
 
 /* Productos */
+.body_productos--encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
 .iconos-productos{
     width: 3em;
 }
@@ -186,7 +193,7 @@ h2{
     justify-content: center;
     padding: 2em;
 }
-.card{
+.cards{
     width: 20em;
     margin-left: 3em;
     margin-bottom: 1em;
@@ -205,19 +212,31 @@ h2{
 }
 
 
-/* Productos: Tabla de pedidos */
 /* Carrito */
-.carrito{
-    text-align: center;
-    margin: 2em;
+
+.icono-carrito{
+    font-size: 20%;
 }
-.carrito table{
-    margin:auto;
-    text-align: center;
+.carrito-compras{
+    position: relative;
+    z-index: 500;
 }
-/* tr{
-    display: flex;
+.carrito-compras .carrito{
+    display: none;
 }
+.carrito-compras:hover .carrito{
+    display: block;
+    position:absolute;
+    right: 0;
+    cursor: pointer;
+    background-color: #ffce1e;
+    border: 1px solid #ffce1e;
+    border-radius: 10%;
+    padding: 2em;
+    min-height: 25em;
+    min-width: 20em;
+}
+/* 
 td{
     border: 1px solid black;
     width: 100px;
@@ -354,7 +373,7 @@ footer h3, footer a{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         position: fixed;
-        z-index: 100;
+        z-index: 1000;
         width: 100%;
         align-items: center;
         justify-items: center;
@@ -395,9 +414,9 @@ footer h3, footer a{
     }
     /* Posicion de body */
     .inicio, .nosotros, .body-productos, .contacto{
-        top: 3em;
+        top: 3.5em;
     }
-
+    
     /* Inicio */
     .img-principal_responsive{
         display: none;

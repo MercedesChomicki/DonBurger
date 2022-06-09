@@ -1,3 +1,12 @@
+//DESPLIEGUE DE MENU - MENU BARS
+document.querySelector(".btn_menu").addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    document.querySelector(".navigation").classList.toggle("show");
+}
+
+
+
 const texto = document.querySelector('.actualizar-texto');
 const code = document.querySelector('#code');
 const input = document.querySelector('.userInput input');

@@ -6,35 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Gourmet Burger</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <ul class="menu">
-                <li class="logo"><a href="./index.html">GourmetBurger</a></li>
-                <li><a href="./index.html">Inicio</a></li>
-                <li class="nav-productos">
-                    <a href="./Productos.html">Productos</a>
-                    <ul class="nav-productos__lista">
-                        <li><a href="./Productos.html">Hamburguesas</a></li>
-                        <li><a href="./Productos.html">Ensaladas</a></li>
-                        <li><a href="./Productos.html">Papas</a></li>
-                        <li><a href="./Productos.html">Postres</a></li>
-                    </ul>
-                </li>
-                <li><a href="./Nosotros.html">Nosotros</a></li>
-                <li><a href="./Contacto.html">Contacto</a></li>
-            </ul>
+            <div class="logo">
+                <h1 class="logo_nombre">Gourmet Burger</h1>
+                <div class="btn_menu"><a><i class="fa fa-bars"></i></a></div>
+            </div>
+
+            <div class="menu">
+                <ul class="navigation">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./Productos.html">Productos</a></li>
+                    <li><a href="./Nosotros.html">Nosotros</a></li>
+                    <li><a href="./Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
-        <span class="btn_menu">
-            <i class="fa fa-bars"></i>
-        </span>
     </header>
+
     <section class="contacto">
         <form>
             <h1>Contacto</h1>
@@ -75,7 +70,7 @@
                     <div class="userInput">
                         <label for="captcha" id="captcha-text">Introduzca el texto: </label>
                         <input type="text" id="captcha-input" class="input-captcha">
-                        <button type="button" id="btn-validar">Validar</button>
+                        <button type="button" id="btn-validar" class="btn-validar">Validar</button>
                         <p id="vacio" class="val rojo">Por favor, ingrese texto</p>
                         <p id="validado" class="val verde">Validado</p>
                         <p id="invalido" class="val rojo">Codigo invalido, intentelo nuevamente</p>
@@ -98,7 +93,7 @@
         </div>
         <a href="./Contacto.html">Contacto</a>
     </footer>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

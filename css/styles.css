@@ -5,71 +5,73 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
 }
 /* Barra de navegacion */
 
-nav{
-    display: flex;
-    background-color: rgb(221, 7, 7);
-    color: white;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    justify-content: center;
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
-nav a{
-    color: white;  
-    display: block;
-    padding: 20px 25px;
-}
-nav a:hover{
-    color: black;
-    background-color: #ffce1e;
-}
-.menu{
-    display: flex;
-    justify-content: space-evenly;
+
+.logo {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: minmax(4em, auto);
+    justify-items: center;
     align-items: center;
-    width: 80%;
+    background-color: #dd0707;
+    color: white;
 }
-.menu li{
-    position: relative;
-    width: 20%;
-    text-align: center;
+
+.logo_nombre{
+    grid-column: 1 / 6;
+    font-size: 2.5em;
+    font-family: 'Ms Madi', cursive;
+    font-weight:500;
 }
-.nav-productos__lista{
-    position: absolute;
-    display: none;
-}
-.nav-productos__lista li{
-    width: 100%;
-}
-.nav-productos__lista li a{
-    display: block;
+
+.btn_menu {
+    grid-column: 6 / 8;
+    color: white;
     padding: 15px;
+    font-size: 2em;
 }
-.nav-productos__lista li a:hover{
-    background-color: #ffce1e;
+
+.btn_menu a{
+    color: white;
 }
-.menu li:hover .nav-productos__lista{
-    display: block;
+
+.menu {
     width: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.793); 
+}
+
+ul.navigation {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+ul.navigation.show {
+    display: flex;
+}
+
+ul.navigation li {
+    font-size: 1.2em;
+    padding: 15px 20px;
+}
+
+ul.navigation li a {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+ul.navigation li:hover {
     background-color: #dd0707;
 }
-.logo{
-    display: inline-block;
-}
-.logo a{
-    font-size: 2.2em;
-    color: #FFF;
-    font-family: 'Ms Madi', cursive;
-    padding: 0.3em;
-}
-.btn_menu{
-    display: none;
-}
+
+
 /* Titulos */
 h1{
     font-family: 'koulen', cursive;
@@ -89,10 +91,17 @@ img{
 
 .inicio, .nosotros, .body-productos, .contacto{
     position: relative;
-    top: 3.6em;
+    top: 0;
     background-color: beige;
 }
+
+/* Inicio */
+
 .img-principal{
+    display: none;
+}
+.img-principal_responsive{
+    display: block;
     width: 100%;
     border-radius: 0;
 }
@@ -100,24 +109,33 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em;
+    font-size: 0.8em;
 }
+    
 .carita-feliz{
     width: 4em;
     height: 4em;
-    margin-left: 2em;
+    margin-right: 2em;
+    margin-left: 1em;
 }
+   
 .inicio__contenido{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #000;
     background-color: rgb(233, 233, 157);
-    /* background-color: #ffdb58; */
-    font-size: 1.2em;
-    padding: 3em 5em;
-    margin-bottom: 2.5em;
-} 
+    padding: 3em;
+    font-size: 1em;
+    text-align: justify;
+}
+  
+.inicio__contenido .p1 {
+    margin-bottom: 2em;
+    letter-spacing: 2px;
+}
 
 /* Productos */
 .iconos-productos{
@@ -130,11 +148,13 @@ img{
 }
 .publicidad{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
     margin: 3em 0;
     background-color: beige;
 }
+
 h2{
     text-align: center;
     font-size: 2em;
@@ -148,7 +168,12 @@ h2{
     padding-bottom: 1em;
 }
 .card-especial{
-    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chili-burger{
+    width: 50%;
 }
 .nuevas-hamburguesas{
     display: flex;
@@ -178,71 +203,84 @@ h2{
     margin-top: 1em;
     font-size: 1em;
 }
+
+
+/* Productos: Tabla de pedidos */
+/* Carrito */
 .carrito{
     text-align: center;
+    margin: 2em;
 }
 .carrito table{
     margin:auto;
     text-align: center;
 }
-.carrito h3{
-    display: inline;
-}
-/* Productos: Tabla de pedidos */
-
-tr{
+/* tr{
     display: flex;
 }
 td{
     border: 1px solid black;
     width: 100px;
     height: 25px;
-}
-
+} */
 /* Nosotros */
 .nosotros{
     position: relative;
     display: flex;
+    flex-direction: column;
     text-align: justify;
     align-items: center;
-    padding: 1.5em 3em 4em;
+    padding: 0;
 }
 .nosotros__contenido{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2em 4em 5em 2em;
+    padding: 2em;
 }
 .txt-nosotros{
     padding-top: 2em;
     line-height: 1.5em;
 }
 .img-nosotros{
-    width: 45%;
+    width: 90%;
+    padding-bottom: 2em;
 }
 
-/* Formulario contacto */
+/* Contacto */
 
+section.contacto{
+    width: 100%;
+    height: 100%;
+}
 form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 100vh;
     padding-bottom: 4em;
 }
 form ul li{
     padding: 0.5em;
+    font-size: 1.5em;
+    padding-bottom: 1.5em;
 }
+
 input{
     text-transform: capitalize;
+    width: 60%;
+    height: 3em;
 }
 input:focus{
-    height: 1.5rem;
+    height: 4em;
 }
 .email{
     text-transform: none;
+}
+textarea{
+    width: 60%;
+    height: 5em;
 }
 .segurity-code{
     display: flex;
@@ -252,7 +290,7 @@ input:focus{
 .code{
     border: 1px solid #000;
     padding: 0.5em;
-    width: 40%;
+    width: 60%;
     margin-bottom: 1em;
     margin-right: 1em;
     font-size: 1.5em;
@@ -262,6 +300,9 @@ input:focus{
 }
 .input-captcha{
     text-transform: none;
+}
+.btn-validar{
+    font-size: 1em;
 }
 .val{
     border: 1px solid #000;
@@ -281,8 +322,9 @@ input:focus{
 .verde{
     background-color: rgb(0, 244, 28);
     width: 10em;
-}
+} 
 /* Footer */
+
 footer{
     display: flex;
     background-color: #ffce1e;
@@ -299,49 +341,126 @@ footer{
     padding: 0 10px;
     width: 4em;
 }
-footer a{
-    color: #000;
-    font-size: 1.2em;
+
+footer h3, footer a{
+    display: none;
 }
-footer a:hover{
-    color: rgb(221, 7, 7);
-    background-color: #ffce1e;
-}
-@media screen and (max-width:768px){
-    .container-cards{
-        justify-content:space-evenly;
-        padding: 0;
-    }
-    section{
-        padding: 2em 0 4em 0;
-        width: 50%;
-        border: 1px solid #000;
-    }
-    form ul li{
-        padding-bottom: 1.5em;
-    }
+
+
+@media screen and (min-width:800px){
+
+    /* Barra de navegacion */
     nav{
-        display: flex;
-        justify-content: space-between;
-        padding-right: 3em;
-        padding-left: 3em;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+        background-color: #dd0707;
+    }
+    .logo{
+        display: block;
+        grid-column: 2 / 4;
+    }
+    .logo_nombre{
+        font-size: 2em;
+        font-family: 'Ms Madi', cursive;
+    }
+    .logo_nombre:hover{
+        cursor: pointer;
+    }
+    .btn_menu {
+        display: none;
     }
     .menu{
-        position: fixed;
-        top: -100vh;
-        width: 100vw;
-        flex-direction: column;
-        background-color: rgb(221, 7, 7);
+        grid-column: 4 / 8;
+        background-color: #dd0707;
     }
-    .btn_menu{
+    ul.navigation {
+        width: 100%;
         display: flex;
-        align-items: center;
-        font-size: 2.5em;
-        color: #FFF;
+        flex-direction: row;
     }
-}
-@media screen and (max-width: 480px){
-    .btn_menu{
-        display: inline-block;
+    ul.navigation a{
+        font-size: 0.7em;
+    }
+    ul.navigation a:hover{
+        background-color: #ffce1e;
+        padding: 0.8em;
+        color: rgba(0, 0, 0, 0.793);
+        border: 1px solid #ffce1e;
+        border-radius: 10%;
+    }
+    /* Posicion de body */
+    .inicio, .nosotros, .body-productos, .contacto{
+        top: 3em;
+    }
+
+    /* Inicio */
+    .img-principal_responsive{
+        display: none;
+    }
+    .img-principal{
+        display: block;
+        width: 100%;
+        border-radius: 0;
+    }
+    .titulo_icono{
+        padding: 1em;
+    }
+    .inicio__contenido{
+        font-size: 1.2em;
+        padding: 3em 5em;
+        margin-bottom: 2.5em;
+    }
+
+    /* Productos */
+    .publicidad{
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: 3em;
+        background-color: beige;
+    }
+    
+    /* Nosotros */
+    .nosotros{
+        flex-direction: row;
+        padding: 1.5em 3em 4em;
+    }
+    .nosotros__contenido{
+        padding: 2em 4em 5em 2em;
+    }
+    .img-nosotros{
+        width: 45%;
+    }
+
+    /* Contacto */
+    .contacto ul li {
+        font-size: 1em;
+    }
+    input{
+        text-transform: capitalize;
+        width: 60%;
+        height: 2em;
+    }
+    input:focus{
+        height: 3em;
+    }
+
+    /* Footer */
+    footer h3{
+        display: block;
+    }
+    footer a{
+        display: block;
+        color: #000;
+        font-size: 1.2em;
+    }
+    footer a:hover{
+        color: rgb(221, 7, 7);
+        background-color: #ffce1e;
     }
 }

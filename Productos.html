@@ -6,32 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Gourmet Burger</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <ul class="menu">
-                <li class="logo"><a href="./index.html">GourmetBurger</a></li>
-                <li><a href="./index.html">Inicio</a></li>
-                <li class="nav-productos">
-                    <a href="./Productos.html">Productos</a>
-                    <ul class="nav-productos__lista">
-                        <li><a href="./Productos.html">Hamburguesas</a></li>
-                        <li><a href="./Productos.html">Ensaladas</a></li>
-                        <li><a href="./Productos.html">Papas</a></li>
-                        <li><a href="./Productos.html">Postres</a></li>
-                    </ul>
-                </li>
-                <li><a href="./Nosotros.html">Nosotros</a></li>
-                <li><a href="./Contacto.html">Contacto</a></li>
-            </ul>
+            <div class="logo">
+                <h1 class="logo_nombre">Gourmet Burger</h1>
+                <div class="btn_menu"><a><i class="fa fa-bars"></i></a></div>
+            </div>
+
+            <div class="menu">
+                <ul class="navigation">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./Productos.html">Productos</a></li>
+                    <li><a href="./Nosotros.html">Nosotros</a></li>
+                    <li><a href="./Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
-        <span class="btn_menu">
-            <i class="fa fa-bars"></i>
-        </span>
     </header>
+
     <section class="body-productos">
         <h1>Nuestros productos</h1>
         <div class="body_productos--encabezado">
@@ -57,20 +55,26 @@
                     <b>Combo Especial</b>
                 </a>
             </div>
-            <div class="carrito">
-                <h3>Pedidos</h3>
-                <table>
-                    <tr>
-                        <td>Productos</td>
-                        <td>Cantidad</td>
-                        <td>Precio</td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                    </tr>
-                </table>
+            <div>
+                <ul>
+                    <li class="carrito-compras">
+                        <div id="carrito" class="carrito">
+                            <h3>Pedidos</h3>
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Productos</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="productos">
@@ -238,7 +242,7 @@
                 <div class="card-especial">
                     <img src="./imagenes/MexicanChiliBurger -2jpg.jpg" alt="Hamburguesa picante mexicana"
                         class="img-publi">
-                    <p>Mega hamburguesa picante compuesta de ají, salsa picante, doble medallon de carne,
+                    <p class="chili-burger">Mega hamburguesa picante compuesta de ají, salsa picante, doble medallon de carne,
                         lechuga,
                         tomate, queso y cebolla morada. </p>
                     <button class="btn-agregarCarrito">Agregar al carrito</button>
@@ -256,7 +260,7 @@
         </div>
         <a href="./Contacto.html">Contacto</a>
     </footer>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

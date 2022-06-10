@@ -73,7 +73,7 @@ ul.navigation li:hover {
 
 /* Titulos */
 .titulos{
-    padding: 1em 0;
+    padding: 1em 0 0;
     font-family: 'koulen', cursive;
     font-style: italic;
     font-weight: 200;
@@ -141,9 +141,7 @@ img{
 .body_productos--encabezado{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
-
 }
 .iconos-productos{
     width: 3em;
@@ -151,7 +149,7 @@ img{
 .lista-productos{
     text-align: center;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 .publicidad{
     display: flex;
@@ -168,25 +166,7 @@ h2{
     padding-bottom: 1em;
     padding-top: 0.5em;
 }
-.img-publi{
-    display: block;
-    margin: auto;
-    width: 40vw;
-    padding-bottom: 1em;
-}
-.card-especial{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.chili-burger{
-    width: 50%;
-}
-.nuevas-hamburguesas{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 .container-cards{
     display: flex;
     flex-wrap: wrap;
@@ -201,6 +181,16 @@ h2{
 .card h3{
     padding-top: 1em;
 }
+.descripcion{
+    height: 1.87em;
+    overflow: hidden;
+    
+}
+.descripcion:hover{
+    height: 4.5em;
+    transition: all 1s;
+}
+
 .btn-agregarCarrito, .btn-enviar{
     padding: 0.5em;
     color: #fff;
@@ -213,35 +203,27 @@ h2{
 
 
 /* Carrito */
-
+.carrito-compras__titulo{
+    display: flex;
+    align-items: center;
+}
+.titulo-carrito{
+    padding-bottom: 0;
+}
 .icono-carrito{
-    font-size: 20%;
+    width: 4em;
+    height: 3em;
 }
 .carrito-compras{
+    padding: 2em;
     position: relative;
     z-index: 500;
 }
+
 .carrito-compras .carrito{
-    display: none;
-}
-.carrito-compras:hover .carrito{
     display: block;
-    position:absolute;
-    right: 0;
-    cursor: pointer;
-    background-color: #ffce1e;
-    border: 1px solid #ffce1e;
-    border-radius: 10%;
-    padding: 2em;
-    min-height: 25em;
-    min-width: 20em;
 }
-/* 
-td{
-    border: 1px solid black;
-    width: 100px;
-    height: 25px;
-} */
+
 /* Nosotros */
 .nosotros{
     position: relative;
@@ -442,6 +424,11 @@ footer h3, footer a{
         text-align: center;
         margin: 3em;
         background-color: beige;
+    }
+    .body_productos--encabezado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     
     /* Nosotros */

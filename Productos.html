@@ -60,15 +60,17 @@
             <div>
                 <ul>
                     <li class="carrito-compras">
-                        <img src="./imagenes/carrito.png" alt="Carrito de compras" class="icono-carrito">
+                        <div class="carrito-compras__titulo">
+                            <h2 class="titulo-carrito">Carrito de compras</h2>
+                            <img src="./imagenes/carrito.png" alt="Carrito de compras" class="icono-carrito">
+                        </div>
                         <div id="carrito" class="carrito">
-                            <table id="lista-carrito">
+                            <table id="lista-carrito" class="table table-hover">
                                 <thead>
                                     <tr>
+                                        <th>Imagen</th>
                                         <th>Productos</th>
-                                        <th>Cantidad</th>
                                         <th>Precio</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody></tbody>
@@ -84,21 +86,31 @@
                 <div>
                     <h2>Hamburguesas</h2>
                     <div class="container-cards">
+
                         <div class="cards">
-                            <img src="./imagenes/ClasicBurger.jpg" alt="Clasic Burger">
+                            <img src="./imagenes/Mexican-Burger.jpg" alt="Hamburguesa picante mexicana">
+                            <div>
+                                <h3>MexicanBurger</h3>
+                                <p class="descripcion">Mega hamburguesa picante: ají, salsa picante, doble medallon de
+                                    carne, lechuga, tomate, queso y cebolla morada. </p>
+                                <p class="precio">$900</p>
+                                <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img src="./imagenes/Clasic-Burger.jpg" alt="Clasic Burger">
                             <div>
                                 <h3>ClasicBurger</h3>
-                                <p>Lechuga, tomate, jamon y queso.</p>
+                                <p class="descripcion">Lechuga, tomate, jamon y queso.</p>
                                 <p class="precio">$800</p>
                                 <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
                         <div class="cards">
-                            <img src="./imagenes/blackBurger.jpg" alt="Black Burger">
+                            <img src="./imagenes/Black-Burger.jpg" alt="Black Burger">
                             <div>
                                 <h3>BlackBurger</h3>
-                                <p>Esta deliciosa hamburguesa hecha con pan de papa y tinta de calamar está rellena de
-                                    panceta, queso cheddar, lechuga, tomate, cebolla morada, batata y
+                                <p class="descripcion">Panceta, queso cheddar, lechuga, tomate, cebolla morada, batata y
                                     ketchup.
                                 </p>
                                 <p class="precio">$800</p>
@@ -106,42 +118,38 @@
                             </div>
                         </div>
                         <div class="cards">
-                            <img src="./imagenes/burgerGrinch.jpg" alt="Burger Grinch">
+                            <img src="./imagenes/Burger-Grinch.jpg" alt="Burger Grinch">
                             <div>
                                 <h3>BurgerGrinch</h3>
-                                <p>Esta hamburguesa de garbanzos vegana está compuesta de repollo morado, tomate,
-                                    tofu y
-                                    lechuga.</p>
+                                <p class="descripcion">Repollo morado, tomate, tofu, lechuga y hamburguesa vegana.</p>
                                 <p class="precio">$800</p>
                                 <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
                         <div class="cards">
-                            <img src="./imagenes/pinkBurger-min.jpg" alt="Pink Burger">
+                            <img src="./imagenes/Pink-Burger.jpg" alt="Pink Burger">
                             <div>
                                 <h3>PinkBurger</h3>
-                                <p>Esta hamburguesa se compone de cebolla de verdeo, pepino, tomate, lechuga,
-                                    cebolla
-                                    morada,
-                                    panceta y queso</p>
+                                <p class="descripcion">Cebolla de verdeo, pepino, tomate, lechuga, cebolla morada, panceta
+                                    y queso.</p>
                                 <p class="precio">$800</p>
                                 <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
                         <div class="cards">
-                            <img src="./imagenes/chickenBurger.jpg" alt="Chicken Burger">
+                            <img src="./imagenes/Chicken-Burger.jpg" alt="Chicken Burger">
                             <div>
                                 <h3>ChickenBurger</h3>
-                                <p>Esta hamburguesa esta compuesta por pollo, lechuga, tomate y queso cheddar.</p>
+                                <p class="descripcion">Pollo, lechuga, tomate y queso cheddar.</p>
                                 <p class="precio">$800</p>
                                 <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
                         </div>
                         <div class="cards">
-                            <img src="./imagenes/fishBurger-min.jpg" alt="Fish Burger">
+                            <img src="./imagenes/Fish-Burger.jpg" alt="Fish Burger">
                             <div>
                                 <h3>FishBurger</h3>
-                                <p>Esta hamburguesa esta compuesta por salmon rosado y queso</p>
+                                <p class="descripcion">Salmon rosado y queso.</p>
                                 <p class="precio">$800</p>
                                 <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
                             </div>
@@ -256,19 +264,6 @@
                 <p class="precio">$800</p>
                 <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
             </div>
-            <div>
-                <h2>Nuevas hamburguesas picantes</h2>
-                <div class="card-especial">
-                    <img src="./imagenes/MexicanChiliBurger -2jpg.jpg" alt="Hamburguesa picante mexicana"
-                        class="img-publi">
-                    <p class="chili-burger">Mega hamburguesa picante compuesta de ají, salsa picante, doble medallon de
-                        carne,
-                        lechuga,
-                        tomate, queso y cebolla morada. </p>
-                    <p class="precio">$800</p>
-                    <a href="#" class="agregar-carrito btn btn-primary">Agregar al carrito</a>
-                </div>
-            </div>
         </div>
     </aside>
     <footer>
@@ -282,6 +277,7 @@
         <a href="./Contacto.html">Contacto</a>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/productos.js"></script>
 </body>
 
 </html>

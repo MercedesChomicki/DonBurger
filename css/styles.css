@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     list-style-type: none;
 }
 /* Barra de navegacion */
@@ -66,6 +65,7 @@ ul.navigation li a {
     color: white;
     font-weight: 600;
     text-transform: uppercase;
+    text-decoration: none;
 }
 ul.navigation li:hover {
     background-color: #dd0707;
@@ -137,27 +137,13 @@ img{
     letter-spacing: 2px;
 }
 
-/* Productos */
-.body_productos--encabezado{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+
+/* Productos - Carrito */
+.container{
+    padding: 2em 0 5em;
 }
-.iconos-productos{
-    width: 3em;
-}
-.lista-productos{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-.publicidad{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    margin: 3em 0;
-    background-color: beige;
+.carrito{
+    background-color: #c0c0c16f;
 }
 
 h2{
@@ -165,63 +151,6 @@ h2{
     font-size: 2em;
     padding-bottom: 1em;
     padding-top: 0.5em;
-}
-
-.container-cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2em;
-}
-.cards{
-    width: 20em;
-    margin-left: 3em;
-    margin-bottom: 1em;
-}
-.card h3{
-    padding-top: 1em;
-}
-.descripcion{
-    height: 1.87em;
-    overflow: hidden;
-    
-}
-.descripcion:hover{
-    height: 4.5em;
-    transition: all 1s;
-}
-
-.btn-agregarCarrito, .btn-enviar{
-    padding: 0.5em;
-    color: #fff;
-    background-color: #0055FF;
-    border: 1px solid #0055FF;
-    border-radius: 6%;
-    margin-top: 1em;
-    font-size: 1em;
-}
-
-
-/* Carrito */
-.carrito-compras__titulo{
-    display: flex;
-    align-items: center;
-}
-.titulo-carrito{
-    padding-bottom: 0;
-}
-.icono-carrito{
-    width: 4em;
-    height: 3em;
-}
-.carrito-compras{
-    padding: 2em;
-    position: relative;
-    z-index: 500;
-}
-
-.carrito-compras .carrito{
-    display: block;
 }
 
 /* Nosotros */
@@ -340,7 +269,10 @@ footer{
 }
 .redes-sociales img{
     padding: 0 10px;
-    width: 4em;
+    width: 3em;
+}
+.redes-sociales img:hover{
+    width: 3.2em;
 }
 
 footer h3, footer a{
@@ -351,6 +283,7 @@ footer h3, footer a{
 @media screen and (min-width:800px){
 
     /* Barra de navegacion */
+   
     nav{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -383,9 +316,10 @@ footer h3, footer a{
         width: 100%;
         display: flex;
         flex-direction: row;
+        margin-bottom: 0;
     }
     ul.navigation a{
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
     ul.navigation a:hover{
         background-color: #ffce1e;
@@ -416,20 +350,6 @@ footer h3, footer a{
         padding: 3em 5em;
         margin-bottom: 2.5em;
     }
-
-    /* Productos */
-    .publicidad{
-        flex-direction: row;
-        justify-content: space-evenly;
-        text-align: center;
-        margin: 3em;
-        background-color: beige;
-    }
-    .body_productos--encabezado{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
     
     /* Nosotros */
     .nosotros{
@@ -459,11 +379,15 @@ footer h3, footer a{
     /* Footer */
     footer h3{
         display: block;
+        font-size: 1.2em;
+        color: rgb(47, 47, 47);
     }
     footer a{
         display: block;
-        color: #000;
+        color: rgb(47, 47, 47);
         font-size: 1.2em;
+        text-decoration: none;
+        font-weight: 500;
     }
     footer a:hover{
         color: rgb(221, 7, 7);
